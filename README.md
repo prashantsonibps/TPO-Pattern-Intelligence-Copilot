@@ -252,10 +252,10 @@ poc/
 | Deliverable | Path |
 |-------------|------|
 | Demo video | [docs/demo.md](docs/demo.md) — [Loom](https://www.loom.com/share/8310596baeae4dad8f2f0915478a3953) |
-| Written report (Word) | `docs/report.docx` — upload your file here |
-| Slide deck (PowerPoint) | `docs/presentation.pptx` — upload your file here |
+| Written report | [docs/tpo360report1.pdf](docs/tpo360report1.pdf) |
+| Slide deck | [docs/TPO360-Prepay-Pattern-Intelligence-Copilot.pptx](docs/TPO360-Prepay-Pattern-Intelligence-Copilot.pptx) |
 
-See [docs/README.md](docs/README.md) for upload steps.
+See [docs/README.md](docs/README.md) for all deliverables.
 
 ---
 
