@@ -5,7 +5,8 @@ import os
 
 from dotenv import load_dotenv
 
-load_dotenv()
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+load_dotenv(PROJECT_ROOT / ".env")
 
 ROOT = Path(__file__).resolve().parent
 DATA_DIR = ROOT / "data"
@@ -19,8 +20,8 @@ MODEL_PATH = MODELS_DIR / "payment_risk_model.pkl"
 FEATURE_COLUMNS_PATH = MODELS_DIR / "feature_columns.json"
 CLUSTER_MODEL_PATH = MODELS_DIR / "provider_cluster_model.pkl"
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
-OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
+ANTHROPIC_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-sonnet-4-6")
 
 CONFIDENCE_AUTO_THRESHOLD = 90.0
 

@@ -12,43 +12,50 @@ Built for prepay review workflows where explainability, audit trails, and human-
 
 ```mermaid
 flowchart TB
-    subgraph input [Input]
-        Claim[ClaimCase]
-        Note[ClinicalNote]
-        Codes[CPT_and_ICD10]
+    subgraph inputs [Input]
+        Claim["Claim case"]
+        Note["Clinical note"]
+        Codes["CPT / ICD-10"]
     end
 
-    subgraph graph [LangGraph Pipeline]
-        Extractor[ExtractorNode]
-        Policy[PolicyNode]
-        Classifier[PaymentRiskClassifier]
-        Cluster[ProviderPatternCluster]
-        Anomaly[TimeSeriesAnomaly]
-        Scorer[ConfidenceScorer]
-        Finalize[FinalizeNode]
+    subgraph auditPipeline [LangGraph audit pipeline]
+        direction TB
+        Extractor["1. Extractor"]
+        Policy["2. Policy"]
+        Classifier["3. Payment risk"]
+        Cluster["4. Provider cluster"]
+        Anomaly["5. Spend anomaly"]
+        Scorer["6. Confidence scorer"]
+        Finalize["7. Finalize"]
+        Extractor --> Policy --> Classifier --> Cluster --> Anomaly --> Scorer --> Finalize
     end
 
-    subgraph output [Output]
-        Auto[AutoResolve]
-        Human[HumanEscalation]
-        TPO[TPORecommendations]
-        Trace[ExecutionTrace]
+    subgraph results [Output]
+        Auto["Auto resolve"]
+        Human["Human escalation"]
+        TPO["TPO recommendations"]
+        Trace["Execution trace"]
     end
 
     Claim --> Extractor
     Note --> Extractor
     Codes --> Policy
-    Extractor --> Policy
-    Policy --> Classifier
-    Classifier --> Cluster
-    Cluster --> Anomaly
-    Anomaly --> Scorer
-    Scorer --> Finalize
     Finalize --> Auto
     Finalize --> Human
     Finalize --> TPO
-    graph --> Trace
+    Finalize --> Trace
 ```
+
+<details>
+<summary>Text version (if the diagram does not render)</summary>
+
+```
+Input: Claim case + clinical note + CPT/ICD-10
+  → Extractor → Policy → Payment risk → Provider cluster → Spend anomaly → Confidence scorer → Finalize
+Output: Auto resolve OR human escalation + TPO recommendations + execution trace
+```
+
+</details>
 
 **Pipeline stages**
 
@@ -73,7 +80,9 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 cp .env.example .env
-# Add OPENAI_API_KEY to .env
+# Add your Anthropic API key to .env:
+#   ANTHROPIC_API_KEY=sk-ant-...
+#   ANTHROPIC_MODEL=claude-sonnet-4-6
 
 python poc/data/generate_synthetic_data.py
 python poc/models/train_models.py
@@ -114,10 +123,30 @@ poc/
 
 All claim data is synthetic. No PHI is used. Record structures follow standard professional claim fields (member, provider, CPT, ICD-10, allowed amount, service date).
 
+## Deployment
+
+This is a **Python Streamlit app** with pre-trained sklearn models and an Anthropic API dependency. It needs a **long-running server process**, not serverless page hosting.
+
+| Platform | Works? | Notes |
+|----------|--------|-------|
+| **Streamlit Community Cloud** | Yes | Easiest live demo. Connect GitHub, set `ANTHROPIC_API_KEY` in Secrets, main file: `poc/app.py` |
+| **Render / Railway / Fly.io** | Yes | Good free-tier options. Deploy as a web service running `streamlit run poc/app.py --server.port $PORT --server.address 0.0.0.0` |
+| **AWS (App Runner, ECS, EC2)** | Yes | Best if you want enterprise hosting. Package with Docker, inject secrets via env vars or AWS Secrets Manager |
+| **Vercel / Netlify** | No | Built for static sites and serverless JS — not a fit for Streamlit + LangGraph |
+
+**Recommendation for your Cotiviti demo:** deploy on **Streamlit Community Cloud** or **Render**. Fast to ship, free tier is enough, and evaluators get a live URL for your video.
+
+**Before going live:**
+1. Set `ANTHROPIC_API_KEY` and `ANTHROPIC_MODEL=claude-sonnet-4-6` as environment secrets (never commit `.env`)
+2. Ensure `poc/data/*.csv` and `poc/models/*.pkl` are in the repo (already included)
+3. Add `--server.address 0.0.0.0` so the host accepts external traffic
+
+**AWS is worth it** only if you need VPC, HIPAA-boundary planning, or Cotiviti-style infra story — overkill for a hackathon POC.
+
 ## Stack
 
 - LangGraph — stateful agent pipeline with auditable execution traces
-- OpenAI — clinical fact extraction
+- Anthropic Claude — clinical fact extraction (`claude-sonnet-4-6`)
 - scikit-learn — classification and clustering
 - Streamlit — interactive audit dashboard
 - Plotly — risk gauges and spend charts

@@ -5,7 +5,7 @@ import re
 
 import pandas as pd
 
-from poc.config import CPT_TIME_REQUIREMENTS, CPT_DESCRIPTIONS, OPENAI_API_KEY, OPENAI_MODEL
+from poc.config import CPT_TIME_REQUIREMENTS, CPT_DESCRIPTIONS, ANTHROPIC_API_KEY, ANTHROPIC_MODEL
 from poc.analytics.classifier import score_claim, load_classifier
 from poc.analytics.clustering import get_provider_cluster
 from poc.analytics.anomaly import detect_spend_anomaly
@@ -13,12 +13,17 @@ from poc.analytics.anomaly import detect_spend_anomaly
 
 def extract_facts_from_note(clinical_note, cpt):
     """Extract structured facts from clinical note — LLM with regex fallback."""
-    if OPENAI_API_KEY:
+    if ANTHROPIC_API_KEY:
         try:
-            from langchain_openai import ChatOpenAI
+            from langchain_anthropic import ChatAnthropic
             from langchain_core.messages import SystemMessage, HumanMessage
 
-            llm = ChatOpenAI(model=OPENAI_MODEL, api_key=OPENAI_API_KEY, temperature=0)
+            llm = ChatAnthropic(
+                model=ANTHROPIC_MODEL,
+                api_key=ANTHROPIC_API_KEY,
+                temperature=0,
+                max_tokens=512,
+            )
             system = (
                 "You extract factual medical events from clinical notes. "
                 "Return ONLY valid JSON with keys: documented_minutes (int), "
@@ -31,10 +36,18 @@ def extract_facts_from_note(clinical_note, cpt):
             ])
             text = response.content.strip()
             if "```" in text:
-                text = text.split("```")[1].replace("json", "").strip()
+                parts = text.split("```")
+                for part in parts:
+                    cleaned = part.strip()
+                    if cleaned.startswith("json"):
+                        cleaned = cleaned[4:].strip()
+                    if cleaned.startswith("{"):
+                        text = cleaned
+                        break
             return json.loads(text)
-        except Exception:
-            pass
+        except Exception as exc:
+            import logging
+            logging.getLogger(__name__).warning("LLM extraction failed, using fallback: %s", exc)
 
     # Regex fallback
     minutes = 20
