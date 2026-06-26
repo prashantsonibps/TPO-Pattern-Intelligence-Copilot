@@ -1,4 +1,9 @@
-"""Cotiviti-inspired UI theme and layout helpers."""
+"""TPO360 UI — Cotiviti-inspired layout and styles."""
+
+from pathlib import Path
+
+ASSETS_DIR = Path(__file__).resolve().parent / "assets"
+LOGO_PATH = ASSETS_DIR / "cotiviti-logo.png"
 
 COTIVITI_CSS = """
 <style>
@@ -9,164 +14,173 @@ html, body, [class*="css"] {
     color: #1a2b4a;
 }
 
-#MainMenu, footer, header[data-testid="stHeader"] {
-    visibility: hidden;
-    height: 0;
+/* Keep Streamlit header visible so the sidebar toggle always works */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+
+header[data-testid="stHeader"] {
+    background: #ffffff !important;
+    border-bottom: 1px solid #dde3ea;
 }
 
 .block-container {
-    padding-top: 0 !important;
-    max-width: 1200px;
+    padding-top: 1rem !important;
+    padding-bottom: 2rem !important;
+    max-width: 1180px;
 }
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background: #f4f6f8 !important;
+    border-right: 1px solid #dde3ea;
+    min-width: 320px !important;
+    width: 320px !important;
+}
+
+section[data-testid="stSidebar"] > div {
+    padding-top: 1rem;
+}
+
+section[data-testid="stSidebar"] .block-container {
+    padding-top: 0.5rem !important;
+}
+
+.sidebar-brand {
+    padding: 0.25rem 0 1rem 0;
+    border-bottom: 1px solid #dde3ea;
+    margin-bottom: 1rem;
+}
+
+.sidebar-brand img {
+    height: 28px;
+    width: auto;
+    margin-bottom: 0.75rem;
+}
+
+.sidebar-section-title {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #5a6b7d;
+    font-weight: 700;
+    margin: 0 0 0.35rem 0;
+}
+
+.sidebar-product {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0d2d4e;
+    margin: 0 0 0.25rem 0;
+}
+
+.sidebar-meta {
+    background: #ffffff;
+    border: 1px solid #dde3ea;
+    border-radius: 4px;
+    padding: 0.75rem;
+    margin: 0.75rem 0;
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.sidebar-meta code {
+    font-size: 0.82rem;
+    color: #0066cc;
+}
+
+.status-pill {
+    display: inline-block;
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+.status-ok { background: #e8f5e9; color: #2e7d32; }
+.status-warn { background: #fff3e0; color: #e65100; }
 
 .coti-topbar {
     background: #0d2d4e;
     color: #ffffff;
-    padding: 0.45rem 1.5rem;
+    padding: 0.5rem 1.25rem;
     font-size: 0.82rem;
-    margin: -1rem -1rem 0 -1rem;
+    margin: -1rem -1rem 1rem -1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.coti-topbar a {
-    color: #7ec8ff;
-    text-decoration: none;
-}
+.coti-topbar a { color: #7ec8ff; text-decoration: none; }
 
 .coti-header {
     background: #ffffff;
-    border-bottom: 1px solid #dde3ea;
-    padding: 1rem 1.5rem 1.25rem;
-    margin: 0 -1rem 1.5rem -1rem;
+    border: 1px solid #dde3ea;
+    border-radius: 4px;
+    padding: 0.85rem 1.15rem;
+    margin-bottom: 1rem;
 }
 
-.coti-logo {
-    font-size: 1.85rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    color: #0066cc;
-    margin: 0;
-    line-height: 1;
+.coti-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
-.coti-logo span {
-    color: #f5a623;
-}
+.coti-header img { height: 32px; width: auto; }
 
 .coti-nav {
     display: flex;
-    gap: 1.75rem;
-    margin-top: 0.85rem;
-    font-size: 0.92rem;
+    gap: 1.25rem;
+    font-size: 0.88rem;
     font-weight: 600;
+    flex-wrap: wrap;
 }
 
-.coti-nav span {
-    color: #5a6b7d;
-    cursor: default;
-}
-
+.coti-nav span { color: #5a6b7d; }
 .coti-nav .active {
     color: #0066cc;
     border-bottom: 2px solid #0066cc;
-    padding-bottom: 0.15rem;
+    padding-bottom: 0.1rem;
 }
 
 .coti-hero {
-    background: linear-gradient(135deg, #0d2d4e 0%, #1a4a7a 55%, #0066cc 100%);
+    background: linear-gradient(135deg, #0d2d4e 0%, #1a4a7a 50%, #0066cc 100%);
     color: #ffffff;
-    padding: 2rem 1.75rem;
+    padding: 1.75rem 1.5rem;
     border-radius: 4px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .coti-hero h1 {
     color: #ffffff !important;
-    font-size: 1.85rem !important;
+    font-size: 1.65rem !important;
     font-weight: 700 !important;
-    margin-bottom: 0.5rem !important;
+    margin: 0 0 0.45rem 0 !important;
+    line-height: 1.25 !important;
 }
 
 .coti-hero p {
     color: #d8e8f8;
-    font-size: 1.02rem;
+    font-size: 0.98rem;
     margin: 0;
-    max-width: 720px;
-}
-
-.coti-stat-row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.coti-stat {
-    background: #ffffff;
-    border: 1px solid #dde3ea;
-    border-top: 3px solid #0066cc;
-    padding: 1.1rem 1rem;
-    border-radius: 2px;
-}
-
-.coti-stat .value {
-    font-size: 1.55rem;
-    font-weight: 700;
-    color: #0066cc;
-    line-height: 1.2;
-}
-
-.coti-stat .label {
-    font-size: 0.78rem;
-    color: #5a6b7d;
-    margin-top: 0.35rem;
-    line-height: 1.35;
-}
-
-.coti-solutions {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.coti-solution-card {
-    background: #ffffff;
-    border: 1px solid #dde3ea;
-    padding: 1.15rem;
-    border-radius: 2px;
-    min-height: 130px;
-}
-
-.coti-solution-card h4 {
-    color: #0066cc;
-    font-size: 0.95rem;
-    margin: 0 0 0.45rem 0;
-    font-weight: 700;
-}
-
-.coti-solution-card p {
-    color: #5a6b7d;
-    font-size: 0.82rem;
-    margin: 0;
-    line-height: 1.45;
+    max-width: 680px;
+    line-height: 1.5;
 }
 
 .coti-panel {
     background: #ffffff;
     border: 1px solid #dde3ea;
-    border-radius: 2px;
-    padding: 1.25rem 1.35rem;
+    border-radius: 4px;
+    padding: 1.25rem;
     margin-bottom: 1rem;
 }
 
 .coti-panel-title {
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 700;
     color: #1a2b4a;
-    margin-bottom: 0.75rem;
+    margin: 0 0 1rem 0;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid #eef2f6;
 }
@@ -176,7 +190,7 @@ html, body, [class*="css"] {
     color: #2e7d32;
     border-left: 4px solid #43a047;
     padding: 0.85rem 1rem;
-    border-radius: 2px;
+    border-radius: 4px;
     font-weight: 600;
     margin-bottom: 1rem;
 }
@@ -186,34 +200,44 @@ html, body, [class*="css"] {
     color: #e65100;
     border-left: 4px solid #f5a623;
     padding: 0.85rem 1rem;
-    border-radius: 2px;
+    border-radius: 4px;
     font-weight: 600;
     margin-bottom: 1rem;
 }
 
-.coti-sidebar-label {
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: #5a6b7d;
+.coti-solutions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.coti-solution-card {
+    background: #f8fafc;
+    border: 1px solid #dde3ea;
+    padding: 0.85rem;
+    border-radius: 4px;
+}
+
+.coti-solution-card h4 {
+    color: #0066cc;
+    font-size: 0.88rem;
+    margin: 0 0 0.35rem 0;
     font-weight: 700;
-    margin-bottom: 0.35rem;
 }
 
-div[data-testid="stSidebar"] {
-    background: #f4f6f8;
-    border-right: 1px solid #dde3ea;
-}
-
-div[data-testid="stSidebar"] .block-container {
-    padding-top: 1rem;
+.coti-solution-card p {
+    color: #5a6b7d;
+    font-size: 0.8rem;
+    margin: 0;
+    line-height: 1.4;
 }
 
 .stButton > button[kind="primary"] {
     background: #0066cc !important;
     border: none !important;
     font-weight: 600 !important;
-    border-radius: 2px !important;
+    border-radius: 4px !important;
 }
 
 .stButton > button[kind="primary"]:hover {
@@ -221,22 +245,19 @@ div[data-testid="stSidebar"] .block-container {
 }
 
 .stTabs [data-baseweb="tab-list"] {
-    gap: 0;
     border-bottom: 2px solid #dde3ea;
-}
-
-.stTabs [data-baseweb="tab"] {
-    font-weight: 600;
-    color: #5a6b7d;
 }
 
 .stTabs [aria-selected="true"] {
     color: #0066cc !important;
+    font-weight: 700;
 }
 
 @media (max-width: 900px) {
-    .coti-stat-row, .coti-solutions {
-        grid-template-columns: repeat(2, 1fr);
+    .coti-solutions { grid-template-columns: 1fr; }
+    section[data-testid="stSidebar"] {
+        min-width: 280px !important;
+        width: 280px !important;
     }
 }
 </style>
@@ -248,13 +269,31 @@ def inject_theme():
     st.markdown(COTIVITI_CSS, unsafe_allow_html=True)
 
 
+def _logo_html(height=32):
+    if LOGO_PATH.exists():
+        import base64
+        b64 = base64.b64encode(LOGO_PATH.read_bytes()).decode()
+        return f'<img src="data:image/png;base64,{b64}" alt="Cotiviti" style="height:{height}px;width:auto;" />'
+    return '<span style="font-size:1.4rem;font-weight:700;color:#0066cc;">cotiviti</span>'
+
+
+def render_sidebar_brand():
+    import streamlit as st
+    st.markdown(
+        f'<div class="sidebar-brand">{_logo_html(26)}'
+        f'<p class="sidebar-product">TPO360 Pattern Review</p>'
+        f'<p class="sidebar-section-title">Claim audit workspace</p></div>',
+        unsafe_allow_html=True,
+    )
+
+
 def render_topbar():
     import streamlit as st
     st.markdown(
         """
         <div class="coti-topbar">
-            <span>Pattern Intelligence Platform — Prepay &amp; Postpay Review</span>
-            <span><a href="#">Client Center</a></span>
+            <span>Payment Accuracy · Prepay &amp; Postpay Pattern Review</span>
+            <span><a href="https://www.cotiviti.com/solutions/payment-accuracy" target="_blank">Solutions</a></span>
         </div>
         """,
         unsafe_allow_html=True,
@@ -271,8 +310,10 @@ def render_site_header(active="Payment Accuracy"):
     st.markdown(
         f"""
         <div class="coti-header">
-            <p class="coti-logo">coti<span>viti</span></p>
-            <div class="coti-nav">{nav_html}</div>
+            <div class="coti-header-row">
+                {_logo_html(32)}
+                <div class="coti-nav">{nav_html}</div>
+            </div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -282,23 +323,9 @@ def render_site_header(active="Payment Accuracy"):
 def render_hero(title, subtitle):
     import streamlit as st
     st.markdown(
-        f"""
-        <div class="coti-hero">
-            <h1>{title}</h1>
-            <p>{subtitle}</p>
-        </div>
-        """,
+        f'<div class="coti-hero"><h1>{title}</h1><p>{subtitle}</p></div>',
         unsafe_allow_html=True,
     )
-
-
-def render_stats(stats):
-    import streamlit as st
-    cards = "".join(
-        f'<div class="coti-stat"><div class="value">{s["value"]}</div><div class="label">{s["label"]}</div></div>'
-        for s in stats
-    )
-    st.markdown(f'<div class="coti-stat-row">{cards}</div>', unsafe_allow_html=True)
 
 
 def render_solution_cards(cards):
@@ -308,9 +335,3 @@ def render_solution_cards(cards):
         for c in cards
     )
     st.markdown(f'<div class="coti-solutions">{html}</div>', unsafe_allow_html=True)
-
-
-def render_panel(title, content_fn):
-    import streamlit as st
-    st.markdown(f'<div class="coti-panel-title">{title}</div>', unsafe_allow_html=True)
-    content_fn()

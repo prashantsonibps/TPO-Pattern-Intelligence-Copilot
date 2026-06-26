@@ -1,4 +1,4 @@
-"""Streamlit dashboard — Cotiviti-style Payment Accuracy workspace."""
+"""TPO360 — Payment pattern review workspace."""
 
 import json
 import sys
@@ -29,11 +29,18 @@ from poc.ui.theme import (
     render_topbar,
     render_site_header,
     render_hero,
-    render_stats,
     render_solution_cards,
+    render_sidebar_brand,
 )
 
 CHART_COLORS = {"primary": "#0066CC", "accent": "#F5A623", "navy": "#0D2D4E"}
+
+CASE_HINTS = {
+    "CASE-001": "Expected: human escalation (E/M upcoding)",
+    "CASE-002": "Expected: human escalation (spend anomaly)",
+    "CASE-003": "Expected: human escalation (code pairing)",
+    "CASE-004": "Expected: auto-resolve (clean claim)",
+}
 
 
 @st.cache_data
@@ -48,40 +55,54 @@ def load_data():
 def ensure_models():
     from poc.config import MODEL_PATH, CLUSTER_MODEL_PATH
     if not MODEL_PATH.exists() or not CLUSTER_MODEL_PATH.exists():
-        with st.spinner("Training models..."):
+        with st.spinner("Initializing models…"):
             train_models()
 
 
 def render_sidebar(demo_cases):
-    st.sidebar.markdown('<p class="coti-sidebar-label">Claim Review</p>', unsafe_allow_html=True)
-    st.sidebar.markdown("### 360 Pattern Review")
-    st.sidebar.caption("Select a sample claim to run through the audit pipeline.")
+    render_sidebar_brand()
 
+    st.markdown("**Select claim scenario**")
     case_labels = [f"{c['case_id']}: {c['title']}" for c in demo_cases]
-    selected_idx = st.sidebar.selectbox(
-        "Sample case", range(len(case_labels)), format_func=lambda i: case_labels[i], label_visibility="collapsed"
+    selected_idx = st.selectbox(
+        "Claim scenario",
+        range(len(case_labels)),
+        format_func=lambda i: case_labels[i],
+        label_visibility="collapsed",
+        key="case_selector",
     )
     case = demo_cases[selected_idx]
 
-    st.sidebar.markdown("---")
-    st.sidebar.markdown(f"**Pattern type**  \n`{case['pattern_type']}`")
-    st.sidebar.markdown(case["description"])
+    if st.session_state.get("last_case_id") != case["case_id"]:
+        st.session_state["last_case_id"] = case["case_id"]
+        st.session_state.pop("audit_result", None)
 
-    col1, col2 = st.sidebar.columns(2)
-    col1.markdown(f"**Member**  \n`{case['member_id']}`")
-    col2.markdown(f"**Provider**  \n`{case['provider_id']}`")
-    st.sidebar.markdown(f"**CPT** `{case['cpt']}` · **ICD-10** `{case['icd10']}` · **${case['allowed_amount']}`")
+    st.caption(CASE_HINTS.get(case["case_id"], ""))
 
-    with st.sidebar.expander("Clinical documentation"):
+    st.markdown(
+        f"""<div class="sidebar-meta">
+        <strong>{case['title']}</strong><br/>
+        {case['description']}<br/><br/>
+        Member <code>{case['member_id']}</code> · Provider <code>{case['provider_id']}</code><br/>
+        CPT <code>{case['cpt']}</code> · ICD-10 <code>{case['icd10']}</code> · ${case['allowed_amount']}
+        </div>""",
+        unsafe_allow_html=True,
+    )
+
+    with st.expander("Clinical documentation", expanded=False):
         st.write(case["clinical_note_override"])
 
-    llm_status = "Anthropic connected" if ANTHROPIC_API_KEY else "Offline mode (regex fallback)"
-    st.sidebar.markdown("---")
-    st.sidebar.markdown(f"**Model:** `{ANTHROPIC_MODEL}`")
-    st.sidebar.markdown(f"**LLM status:** {llm_status}")
+    st.markdown("---")
+    st.markdown("**System status**")
+    if ANTHROPIC_API_KEY:
+        st.markdown('<span class="status-pill status-ok">LLM connected</span>', unsafe_allow_html=True)
+    else:
+        st.markdown('<span class="status-pill status-warn">Offline extraction</span>', unsafe_allow_html=True)
+    st.caption(f"Model: `{ANTHROPIC_MODEL}`")
 
-    if not ANTHROPIC_API_KEY:
-        st.sidebar.warning("Add `ANTHROPIC_API_KEY` to your `.env` file to enable LLM extraction.")
+    st.markdown("---")
+    st.markdown("**How to run**")
+    st.markdown("1. Pick a scenario above\n2. Click **Run audit**\n3. Review tabs below")
 
     return case
 
@@ -91,12 +112,12 @@ def render_result_banner(result):
     score = result.get("confidence_score", 0)
     if route == "auto_resolve":
         st.markdown(
-            f'<div class="coti-badge-auto">Auto-Resolved — Confidence {score}% (threshold {CONFIDENCE_AUTO_THRESHOLD}%)</div>',
+            f'<div class="coti-badge-auto">Auto-resolved · Confidence {score}% (threshold {CONFIDENCE_AUTO_THRESHOLD}%)</div>',
             unsafe_allow_html=True,
         )
     else:
         st.markdown(
-            f'<div class="coti-badge-escalate">Requires Human Auditor — Escalation confidence {score}%</div>',
+            f'<div class="coti-badge-escalate">Human review required · Escalation confidence {score}%</div>',
             unsafe_allow_html=True,
         )
 
@@ -110,13 +131,12 @@ def render_execution_trace(trace):
 
 def render_tpo_summary(result):
     tpo = result.get("tpo_recommendation", {})
-    cards = [
+    render_solution_cards([
         {"title": "Treatment", "desc": tpo.get("treatment", "")},
         {"title": "Payment", "desc": tpo.get("payment", "")},
         {"title": "Operations", "desc": tpo.get("operations", "")},
         {"title": "Summary", "desc": tpo.get("summary", "")},
-    ]
-    render_solution_cards(cards)
+    ])
 
 
 def render_payment_risk(payment_risk):
@@ -125,7 +145,7 @@ def render_payment_risk(payment_risk):
     fig = go.Figure(go.Indicator(
         mode="gauge+number",
         value=score,
-        title={"text": "Payment Integrity Risk", "font": {"color": CHART_COLORS["navy"]}},
+        title={"text": "Payment integrity risk", "font": {"color": CHART_COLORS["navy"], "size": 16}},
         number={"font": {"color": CHART_COLORS["navy"]}},
         gauge={
             "axis": {"range": [0, 100], "tickcolor": CHART_COLORS["navy"]},
@@ -138,9 +158,8 @@ def render_payment_risk(payment_risk):
             ],
         },
     ))
-    fig.update_layout(height=280, margin=dict(t=50, b=20, l=20, r=20), paper_bgcolor="rgba(0,0,0,0)")
+    fig.update_layout(height=260, margin=dict(t=40, b=10, l=20, r=20), paper_bgcolor="rgba(0,0,0,0)")
     st.plotly_chart(fig, use_container_width=True)
-    st.markdown("**Top contributing features**")
     for feat in payment_risk.get("top_features", []):
         st.progress(min(feat["importance"], 1.0), text=f"{feat['feature']} ({feat['importance']:.3f})")
 
@@ -161,79 +180,63 @@ def render_anomaly(spend_anomaly):
         df = pd.DataFrame(ts)
         fig = px.bar(df, x="month", y="total_spend", title="Member monthly spend")
         fig.update_traces(marker_color=CHART_COLORS["primary"])
-        fig.update_layout(
-            height=320, margin=dict(t=40, b=20),
-            plot_bgcolor="white", paper_bgcolor="white",
-            font=dict(color=CHART_COLORS["navy"]),
-        )
+        fig.update_layout(height=300, margin=dict(t=40, b=20), plot_bgcolor="white", paper_bgcolor="white")
         if spend_anomaly.get("is_anomaly"):
             fig.add_annotation(
                 text="Anomaly", x=df.iloc[-1]["month"], y=df.iloc[-1]["total_spend"],
                 showarrow=True, arrowhead=2, font=dict(color=CHART_COLORS["accent"]),
             )
         st.plotly_chart(fig, use_container_width=True)
-
-    col1, col2, col3 = st.columns(3)
-    col1.metric("Anomaly detected", "Yes" if spend_anomaly.get("is_anomaly") else "No")
-    col2.metric("Z-score", spend_anomaly.get("z_score", 0))
-    col3.metric("Latest spend", f"${spend_anomaly.get('latest_spend', 0):,.0f}")
-    st.write(spend_anomaly.get("anomaly_details", ""))
+    c1, c2, c3 = st.columns(3)
+    c1.metric("Anomaly", "Yes" if spend_anomaly.get("is_anomaly") else "No")
+    c2.metric("Z-score", spend_anomaly.get("z_score", 0))
+    c3.metric("Latest spend", f"${spend_anomaly.get('latest_spend', 0):,.0f}")
+    st.caption(spend_anomaly.get("anomaly_details", ""))
 
 
 def main():
-    st.set_page_config(page_title="360 Pattern Review | Cotiviti", layout="wide")
-    inject_theme()
-    render_topbar()
-    render_site_header(active="Payment Accuracy")
-    render_hero(
-        "360 Pattern Review",
-        "AI-driven pattern identification and claim audit across prepay and postpay workflows. "
-        "LangGraph orchestration with policy validation, risk scoring, and human-in-the-loop escalation.",
+    st.set_page_config(
+        page_title="TPO360 Pattern Review",
+        layout="wide",
+        initial_sidebar_state="expanded",
     )
-
-    render_stats([
-        {"value": "7", "label": "Pipeline stages in LangGraph audit graph"},
-        {"value": "100%", "label": "Claims reviewed through integrated TPO signals"},
-        {"value": "90%", "label": "Auto-resolve confidence threshold"},
-        {"value": "4", "label": "Sample cases with embedded billing patterns"},
-    ])
-
-    render_solution_cards([
-        {"title": "Determine Claim Responsibility", "desc": "Validate member context and billing policy compliance before payment."},
-        {"title": "Ensure Claim Accuracy", "desc": "Extract clinical facts and match documented time against billed CPT levels."},
-        {"title": "Detect FWA Patterns", "desc": "Score payment risk, cluster provider behavior, and flag spend anomalies."},
-        {"title": "Human-in-the-Loop", "desc": "Route ambiguous claims to analysts with structured escalation payloads."},
-    ])
-
+    inject_theme()
     ensure_models()
 
     try:
         claims, demo_cases = load_data()
     except FileNotFoundError:
-        st.error("Sample data not found. Run setup from README.md.")
-        if st.button("Generate data and train models"):
-            from poc.data.generate_synthetic_data import main as gen
-            gen()
-            train_models()
-            st.cache_data.clear()
-            st.rerun()
+        st.error("Sample data missing. Run `python poc/data/generate_synthetic_data.py` locally.")
         return
 
     set_claims_data(claims)
-    case = render_sidebar(demo_cases)
+
+    with st.sidebar:
+        case = render_sidebar(demo_cases)
+
+    render_topbar()
+    render_site_header(active="Payment Accuracy")
+    render_hero(
+        "360 Pattern Review",
+        "LangGraph claim audit across prepay and postpay workflows — policy validation, "
+        "payment risk scoring, provider pattern detection, and human-in-the-loop routing.",
+    )
 
     st.markdown('<div class="coti-panel">', unsafe_allow_html=True)
-    st.markdown('<div class="coti-panel-title">Run claim audit</div>', unsafe_allow_html=True)
+    st.markdown('<p class="coti-panel-title">Audit workspace</p>', unsafe_allow_html=True)
 
-    if st.button("Run audit pipeline", type="primary", use_container_width=True):
-        with st.spinner("Executing LangGraph pipeline..."):
-            progress = st.progress(0, text="Starting...")
-            steps = ["Extractor", "Policy", "Payment Risk", "Provider Cluster", "Anomaly", "Confidence", "Finalize"]
-            for i, step in enumerate(steps):
-                progress.progress((i + 1) / len(steps), text=f"Running: {step}...")
-            result = run_audit(case, claims)
-            progress.progress(1.0, text="Complete.")
-            st.session_state["audit_result"] = result
+    col_run, col_info = st.columns([1, 2])
+    with col_run:
+        run_clicked = st.button("Run audit", type="primary", use_container_width=True)
+    with col_info:
+        st.caption(
+            f"Running **{case['case_id']}** through 7 pipeline stages: "
+            "Extractor → Policy → Risk → Cluster → Anomaly → Confidence → Route"
+        )
+
+    if run_clicked:
+        with st.spinner("Running LangGraph pipeline…"):
+            st.session_state["audit_result"] = run_audit(case, claims)
 
     if "audit_result" in st.session_state:
         result = st.session_state["audit_result"]
@@ -241,9 +244,8 @@ def main():
 
         tabs = st.tabs([
             "Execution trace", "Payment risk", "Provider patterns",
-            "Spend anomaly", "TPO recommendations", "Escalation payload",
+            "Spend anomaly", "TPO output", "Escalation JSON",
         ])
-
         with tabs[0]:
             render_execution_trace(result.get("execution_trace", []))
         with tabs[1]:
@@ -258,11 +260,15 @@ def main():
             payload = result.get("escalation_payload", {})
             if payload:
                 st.json(payload)
-            policy = result.get("policy_result", {})
-            if policy.get("violations"):
+            else:
+                st.info("No escalation payload — claim was auto-resolved.")
+            violations = result.get("policy_result", {}).get("violations", [])
+            if violations:
                 st.markdown("**Policy violations**")
-                for v in policy["violations"]:
+                for v in violations:
                     st.markdown(f"- {v}")
+    else:
+        st.info("Select a claim scenario in the sidebar, then click **Run audit**.")
 
     st.markdown("</div>", unsafe_allow_html=True)
 
