@@ -65,8 +65,8 @@ flowchart TB
 ## Quick Start
 
 ```bash
-git clone https://github.com/prashantsonibps/Clinical-Decision-making-and-Pattern-Recognition.git
-cd Clinical-Decision-making-and-Pattern-Recognition
+git clone https://github.com/prashantsonibps/TPO-Pattern-Intelligence-Copilot.git
+cd TPO-Pattern-Intelligence-Copilot
 
 python3 -m venv .venv
 source .venv/bin/activate
