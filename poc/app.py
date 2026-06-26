@@ -31,9 +31,15 @@ from poc.ui.theme import (
     render_hero,
     render_solution_cards,
     render_sidebar_brand,
+    render_empty_state,
 )
 
-CHART_COLORS = {"primary": "#0066CC", "accent": "#F5A623", "navy": "#0D2D4E"}
+CHART_COLORS = {"primary": "#0071E3", "accent": "#FF9500", "navy": "#0D2D4E"}
+CHART_LAYOUT = dict(
+    paper_bgcolor="rgba(0,0,0,0)",
+    plot_bgcolor="rgba(255,255,255,0.35)",
+    font=dict(family="Inter, -apple-system, sans-serif", color="#1D1D1F"),
+)
 
 CASE_HINTS = {
     "CASE-001": "Expected: human escalation (E/M upcoding)",
@@ -62,7 +68,7 @@ def ensure_models():
 def render_sidebar(demo_cases):
     render_sidebar_brand()
 
-    st.markdown("**Select claim scenario**")
+    st.markdown('<p class="sidebar-label">Select claim scenario</p>', unsafe_allow_html=True)
     case_labels = [f"{c['case_id']}: {c['title']}" for c in demo_cases]
     selected_idx = st.selectbox(
         "Claim scenario",
@@ -93,7 +99,7 @@ def render_sidebar(demo_cases):
         st.write(case["clinical_note_override"])
 
     st.markdown("---")
-    st.markdown("**System status**")
+    st.markdown('<p class="sidebar-label">System status</p>', unsafe_allow_html=True)
     if ANTHROPIC_API_KEY:
         st.markdown('<span class="status-pill status-ok">LLM connected</span>', unsafe_allow_html=True)
     else:
@@ -101,8 +107,15 @@ def render_sidebar(demo_cases):
     st.caption(f"Model: `{ANTHROPIC_MODEL}`")
 
     st.markdown("---")
-    st.markdown("**How to run**")
-    st.markdown("1. Pick a scenario above\n2. Click **Run audit**\n3. Review tabs below")
+    st.markdown(
+        """<div class="sidebar-steps">
+        <strong>How to run</strong><br/>
+        1. Pick a scenario above<br/>
+        2. Click <strong>Run audit</strong><br/>
+        3. Review the result tabs
+        </div>""",
+        unsafe_allow_html=True,
+    )
 
     return case
 
@@ -150,15 +163,16 @@ def render_payment_risk(payment_risk):
         gauge={
             "axis": {"range": [0, 100], "tickcolor": CHART_COLORS["navy"]},
             "bar": {"color": bar_color},
-            "bgcolor": "white",
+            "bgcolor": "rgba(255,255,255,0.4)",
+            "borderwidth": 0,
             "steps": [
-                {"range": [0, 40], "color": "#E8F0FA"},
-                {"range": [40, 70], "color": "#FFF3D6"},
-                {"range": [70, 100], "color": "#FDE8E8"},
+                {"range": [0, 40], "color": "rgba(0, 113, 227, 0.12)"},
+                {"range": [40, 70], "color": "rgba(255, 149, 0, 0.12)"},
+                {"range": [70, 100], "color": "rgba(255, 59, 48, 0.10)"},
             ],
         },
     ))
-    fig.update_layout(height=260, margin=dict(t=40, b=10, l=20, r=20), paper_bgcolor="rgba(0,0,0,0)")
+    fig.update_layout(height=260, margin=dict(t=40, b=10, l=20, r=20), **CHART_LAYOUT)
     st.plotly_chart(fig, use_container_width=True)
     for feat in payment_risk.get("top_features", []):
         st.progress(min(feat["importance"], 1.0), text=f"{feat['feature']} ({feat['importance']:.3f})")
@@ -179,8 +193,14 @@ def render_anomaly(spend_anomaly):
     if ts:
         df = pd.DataFrame(ts)
         fig = px.bar(df, x="month", y="total_spend", title="Member monthly spend")
-        fig.update_traces(marker_color=CHART_COLORS["primary"])
-        fig.update_layout(height=300, margin=dict(t=40, b=20), plot_bgcolor="white", paper_bgcolor="white")
+        fig.update_traces(marker_color=CHART_COLORS["primary"], marker_line_width=0)
+        fig.update_layout(
+            height=300,
+            margin=dict(t=40, b=20),
+            **CHART_LAYOUT,
+            xaxis=dict(showgrid=False),
+            yaxis=dict(gridcolor="rgba(0,0,0,0.06)"),
+        )
         if spend_anomaly.get("is_anomaly"):
             fig.add_annotation(
                 text="Anomaly", x=df.iloc[-1]["month"], y=df.iloc[-1]["total_spend"],
@@ -229,9 +249,10 @@ def main():
     with col_run:
         run_clicked = st.button("Run audit", type="primary", use_container_width=True)
     with col_info:
-        st.caption(
-            f"Running **{case['case_id']}** through 7 pipeline stages: "
-            "Extractor → Policy → Risk → Cluster → Anomaly → Confidence → Route"
+        st.markdown(
+            f'<p class="coti-run-hint">Running <strong>{case["case_id"]}</strong> through 7 stages: '
+            "Extractor → Policy → Risk → Cluster → Anomaly → Confidence → Route</p>",
+            unsafe_allow_html=True,
         )
 
     if run_clicked:
@@ -268,7 +289,10 @@ def main():
                 for v in violations:
                     st.markdown(f"- {v}")
     else:
-        st.info("Select a claim scenario in the sidebar, then click **Run audit**.")
+        render_empty_state(
+            "Ready to audit",
+            "Select a claim scenario in the left sidebar, then click Run audit.",
+        )
 
     st.markdown("</div>", unsafe_allow_html=True)
 
