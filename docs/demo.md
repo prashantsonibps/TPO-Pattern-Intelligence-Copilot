@@ -1,5 +1,5 @@
 # Demo recording
 
-Paste your Loom or video URL below:
+**Loom presentation:** https://www.loom.com/share/8310596baeae4dad8f2f0915478a3953
 
-<!-- Example: https://www.loom.com/share/xxxxxxxx -->
+Walkthrough of the TPO360 slides and live application at https://tpo360.streamlit.app/

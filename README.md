@@ -4,6 +4,8 @@ Payment pattern review platform for healthcare claims. Runs each claim through a
 
 **Live app:** https://tpo360.streamlit.app/
 
+**Demo video:** https://www.loom.com/share/8310596baeae4dad8f2f0915478a3953
+
 ---
 
 ## What it does
@@ -247,20 +249,13 @@ poc/
 
 ## Documentation & media
 
-Place supporting files here:
+| Deliverable | Path |
+|-------------|------|
+| Demo video | [docs/demo.md](docs/demo.md) — [Loom](https://www.loom.com/share/8310596baeae4dad8f2f0915478a3953) |
+| Written report (Word) | `docs/report.docx` — upload your file here |
+| Slide deck (PowerPoint) | `docs/presentation.pptx` — upload your file here |
 
-| File | Path |
-|------|------|
-| Written report (Word) | `docs/report.docx` |
-| Slide deck (PowerPoint) | `docs/presentation.pptx` |
-| Demo video (MP4 or link) | `docs/demo.md` — paste your Loom/YouTube URL |
-
-Example `docs/demo.md`:
-
-```markdown
-# Demo recording
-https://www.loom.com/share/your-link
-```
+See [docs/README.md](docs/README.md) for upload steps.
 
 ---
 
