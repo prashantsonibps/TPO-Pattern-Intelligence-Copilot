@@ -1,0 +1,26 @@
+member_id,age,gender,plan_type
+M-1001,85,F,Medicare Advantage
+M-1002,62,F,Medicare Advantage
+M-1003,53,F,Medicare Advantage
+M-1004,82,M,Medicare Advantage
+M-1005,46,F,Medicare Advantage
+M-1006,59,F,Medicare Advantage
+M-1007,79,M,Medicare Advantage
+M-1008,73,M,Medicare Advantage
+M-1009,55,M,Commercial PPO
+M-1010,62,F,Medicare Advantage
+M-1011,66,F,Medicare Advantage
+M-1012,69,F,Commercial PPO
+M-1013,67,M,Medicare Advantage
+M-1014,74,F,Commercial PPO
+M-1015,50,M,Commercial PPO
+M-1016,81,F,Medicare Advantage
+M-1017,47,F,Commercial PPO
+M-1018,50,F,Medicare Advantage
+M-1019,69,M,Commercial PPO
+M-1020,85,M,Medicare Advantage
+M-1021,68,M,Medicare Advantage
+M-1022,62,F,Medicare Advantage
+M-1023,79,F,Medicare Advantage
+M-1024,74,M,Commercial PPO
+M-1025,85,F,Commercial PPO

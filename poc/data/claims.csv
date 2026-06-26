@@ -1,0 +1,381 @@
+claim_id,member_id,provider_id,service_date,icd10,cpt,allowed_amount,minutes_documented,clinical_note,is_suspicious,claim_type,place_of_service
+C-00001,M-1001,P-214,2025-05-15,G43.909,99213,337.53,20,Patient seen for 20 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00002,M-1001,P-217,2025-09-17,K21.0,99310,160.58,45,Extended home health visit of 45 minutes. Skilled nursing assessment and wound care documented.,0,Professional,11
+C-00003,M-1001,P-205,2025-09-29,E11.9,99213,225.63,22,Patient seen for 22 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00004,M-1001,P-211,2025-06-07,M54.5,99214,330.86,31,Patient evaluated for 31 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00005,M-1001,P-208,2025-09-06,I10,99309,103.13,26,"Home visit completed in 26 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,13
+C-00006,M-1001,P-225,2025-10-09,J06.9,99213,208.33,30,Patient seen for 30 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00007,M-1001,P-217,2025-10-04,M54.5,99309,340.38,31,"Home visit completed in 31 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,13
+C-00008,M-1001,P-210,2025-08-13,G43.909,99213,255.47,30,Patient seen for 30 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00009,M-1001,P-204,2025-10-11,M54.5,99213,171.28,21,Patient seen for 21 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00010,M-1001,P-208,2025-02-04,E11.9,99213,95.9,30,Patient seen for 30 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00011,M-1001,P-203,2025-04-20,G43.909,99214,260.62,34,Patient evaluated for 34 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00012,M-1001,P-224,2025-05-05,I25.10,99310,235.58,44,Extended home health visit of 44 minutes. Skilled nursing assessment and wound care documented.,0,Professional,12
+C-00013,M-1002,P-204,2025-07-30,I25.10,99213,175.66,26,Patient seen for 26 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00014,M-1002,P-202,2025-07-26,N18.3,99214,106.57,40,Patient evaluated for 40 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00015,M-1002,P-208,2025-08-05,J06.9,99213,201.13,28,Patient seen for 28 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00016,M-1002,P-215,2025-10-09,I10,99213,199.65,21,Patient seen for 21 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00017,M-1002,P-221,2025-05-02,J06.9,G0156,341.63,30,Home health aide services provided for 30 minutes. Personal care assistance documented.,0,Professional,12
+C-00018,M-1002,P-216,2025-03-26,J44.1,99214,323.66,36,Patient evaluated for 36 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00019,M-1002,P-213,2025-10-12,I25.10,99213,157.02,27,Patient seen for 27 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00020,M-1002,P-207,2025-10-05,E11.9,99213,236.38,20,Patient seen for 20 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00021,M-1002,P-211,2025-09-29,J06.9,99213,208.73,29,Patient seen for 29 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00022,M-1002,P-217,2025-02-04,M54.5,99213,98.5,22,Patient seen for 22 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00023,M-1002,P-204,2025-01-21,K21.0,99310,146.48,44,Extended home health visit of 44 minutes. Skilled nursing assessment and wound care documented.,0,Professional,11
+C-00024,M-1003,P-222,2025-05-14,M54.5,99214,165.42,38,Patient evaluated for 38 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00025,M-1003,P-223,2025-06-03,I25.10,99213,186.86,24,Patient seen for 24 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00026,M-1003,P-230,2025-10-16,I10,99215,82.52,41,Comprehensive evaluation lasting 41 minutes. High complexity management of multiple conditions.,0,Professional,11
+C-00027,M-1003,P-218,2025-06-28,I10,99213,115.76,24,Patient seen for 24 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00028,M-1003,P-212,2025-06-04,K21.0,99213,305.11,27,Patient seen for 27 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00029,M-1003,P-217,2025-02-23,J06.9,99213,160.83,28,Patient seen for 28 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00030,M-1003,P-204,2025-05-25,K21.0,99309,121.97,33,"Home visit completed in 33 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,11
+C-00031,M-1003,P-223,2025-05-16,G43.909,99213,251.24,30,Patient seen for 30 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00032,M-1003,P-209,2025-08-05,F41.1,99310,104.92,35,Extended home health visit of 35 minutes. Skilled nursing assessment and wound care documented.,0,Professional,11
+C-00033,M-1003,P-201,2025-05-15,J06.9,99213,252.02,22,Patient seen for 22 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00034,M-1003,P-215,2025-02-27,I10,99214,231.44,36,Patient evaluated for 36 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00035,M-1003,P-229,2025-10-26,G43.909,99213,305.34,20,Patient seen for 20 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00036,M-1003,P-214,2025-01-21,N18.3,99213,178.46,24,Patient seen for 24 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00037,M-1003,P-222,2025-10-14,J44.1,99213,175.49,21,Patient seen for 21 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00038,M-1004,P-205,2025-04-01,J44.1,99310,313.44,38,Extended home health visit of 38 minutes. Skilled nursing assessment and wound care documented.,0,Professional,11
+C-00039,M-1004,P-206,2025-07-30,M54.5,99215,291.24,45,Comprehensive evaluation lasting 45 minutes. High complexity management of multiple conditions.,0,Professional,12
+C-00040,M-1004,P-206,2025-01-20,I25.10,99215,183.29,41,Comprehensive evaluation lasting 41 minutes. High complexity management of multiple conditions.,0,Professional,11
+C-00041,M-1004,P-207,2025-04-27,M54.5,99309,174.41,32,"Home visit completed in 32 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,11
+C-00042,M-1004,P-222,2025-02-05,F41.1,99213,155.22,25,Patient seen for 25 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00043,M-1004,P-221,2025-10-02,N18.3,99214,344.91,40,Patient evaluated for 40 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00044,M-1004,P-204,2025-05-16,E11.9,99309,128.21,29,"Home visit completed in 29 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,11
+C-00045,M-1004,P-220,2025-09-19,I10,99214,197.83,35,Patient evaluated for 35 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00046,M-1004,P-229,2025-08-12,E11.9,99214,91.98,34,Patient evaluated for 34 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00047,M-1004,P-230,2025-04-11,N18.3,99309,274.25,35,"Home visit completed in 35 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,12
+C-00048,M-1004,P-203,2025-03-05,F41.1,99310,248.25,40,Extended home health visit of 40 minutes. Skilled nursing assessment and wound care documented.,0,Professional,13
+C-00049,M-1004,P-210,2025-06-01,G43.909,99214,188.65,35,Patient evaluated for 35 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00050,M-1004,P-207,2025-03-31,K21.0,99214,262.88,36,Patient evaluated for 36 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00051,M-1004,P-210,2025-04-18,J44.1,99214,162.05,30,Patient evaluated for 30 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00052,M-1004,P-220,2025-04-20,G43.909,99214,199.28,37,Patient evaluated for 37 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00053,M-1004,P-226,2025-05-26,G43.909,99310,257.89,37,Extended home health visit of 37 minutes. Skilled nursing assessment and wound care documented.,0,Professional,13
+C-00054,M-1004,P-221,2025-05-01,F41.1,99214,300.97,31,Patient evaluated for 31 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00055,M-1004,P-226,2025-09-01,K21.0,99213,92.48,20,Patient seen for 20 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00056,M-1004,P-215,2025-07-16,I25.10,99214,235.43,40,Patient evaluated for 40 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00057,M-1005,P-205,2025-02-24,J44.1,99214,321.02,30,Patient evaluated for 30 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00058,M-1005,P-206,2025-10-13,M54.5,99309,205.43,33,"Home visit completed in 33 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,11
+C-00059,M-1005,P-215,2025-10-14,K21.0,99213,260.25,27,Patient seen for 27 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00060,M-1005,P-225,2025-09-16,J44.1,99309,300.05,34,"Home visit completed in 34 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,13
+C-00061,M-1005,P-215,2025-05-07,F41.1,99309,201.52,32,"Home visit completed in 32 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,13
+C-00062,M-1005,P-216,2025-05-27,M54.5,99214,198.77,34,Patient evaluated for 34 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00063,M-1005,P-211,2025-03-19,M54.5,99213,101.76,28,Patient seen for 28 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00064,M-1005,P-223,2025-07-28,N18.3,99213,97.34,23,Patient seen for 23 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00065,M-1005,P-215,2025-07-19,K21.0,99214,304.88,33,Patient evaluated for 33 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00066,M-1005,P-201,2025-01-04,N18.3,99309,182.7,34,"Home visit completed in 34 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,12
+C-00067,M-1005,P-225,2025-10-07,K21.0,99213,225.32,26,Patient seen for 26 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00068,M-1006,P-208,2025-06-22,J44.1,99213,87.84,27,Patient seen for 27 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00069,M-1006,P-206,2025-10-01,E11.9,99309,344.79,27,"Home visit completed in 27 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,12
+C-00070,M-1006,P-219,2025-08-08,J06.9,99214,102.67,30,Patient evaluated for 30 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00071,M-1006,P-206,2025-08-21,N18.3,99213,168.39,26,Patient seen for 26 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00072,M-1006,P-225,2025-08-04,F41.1,99309,283.04,29,"Home visit completed in 29 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,11
+C-00073,M-1006,P-216,2025-06-29,M54.5,99213,94.06,28,Patient seen for 28 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00074,M-1006,P-203,2025-01-16,M54.5,99215,90.87,50,Comprehensive evaluation lasting 50 minutes. High complexity management of multiple conditions.,0,Professional,11
+C-00075,M-1006,P-227,2025-08-31,I10,99213,144.41,22,Patient seen for 22 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00076,M-1006,P-207,2025-03-27,K21.0,99214,287.06,34,Patient evaluated for 34 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00077,M-1006,P-224,2025-02-25,K21.0,99215,340.47,42,Comprehensive evaluation lasting 42 minutes. High complexity management of multiple conditions.,0,Professional,11
+C-00078,M-1006,P-230,2025-07-12,J44.1,99213,325.17,30,Patient seen for 30 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00079,M-1006,P-207,2025-06-04,K21.0,99213,145.57,30,Patient seen for 30 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00080,M-1006,P-226,2025-08-08,N18.3,G0156,173.75,30,Home health aide services provided for 30 minutes. Personal care assistance documented.,0,Professional,11
+C-00081,M-1006,P-217,2025-09-08,I10,99214,309.39,30,Patient evaluated for 30 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00082,M-1006,P-212,2025-08-11,J06.9,99214,270.97,37,Patient evaluated for 37 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00083,M-1007,P-221,2025-08-27,J44.1,99213,289.15,28,Patient seen for 28 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00084,M-1007,P-219,2025-02-14,F41.1,99213,304.3,23,Patient seen for 23 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00085,M-1007,P-208,2025-07-14,N18.3,99215,244.79,49,Comprehensive evaluation lasting 49 minutes. High complexity management of multiple conditions.,0,Professional,11
+C-00086,M-1007,P-216,2025-07-01,F41.1,99309,211.64,27,"Home visit completed in 27 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,12
+C-00087,M-1007,P-209,2025-09-22,M54.5,99309,230.06,29,"Home visit completed in 29 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,11
+C-00088,M-1007,P-208,2025-05-04,I25.10,99215,229.9,47,Comprehensive evaluation lasting 47 minutes. High complexity management of multiple conditions.,0,Professional,13
+C-00089,M-1007,P-223,2025-04-24,J44.1,99214,105.12,30,Patient evaluated for 30 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00090,M-1007,P-208,2025-10-11,G43.909,99213,179.64,29,Patient seen for 29 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00091,M-1007,P-214,2025-08-21,F41.1,G0156,169.31,38,Home health aide services provided for 38 minutes. Personal care assistance documented.,0,Professional,12
+C-00092,M-1007,P-209,2025-10-02,J06.9,99213,165.2,23,Patient seen for 23 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00093,M-1007,P-207,2025-09-26,K21.0,99215,275.64,44,Comprehensive evaluation lasting 44 minutes. High complexity management of multiple conditions.,0,Professional,12
+C-00094,M-1007,P-204,2025-04-02,F41.1,99309,141.42,29,"Home visit completed in 29 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,11
+C-00095,M-1007,P-223,2025-01-28,G43.909,99214,92.29,34,Patient evaluated for 34 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00096,M-1007,P-223,2025-09-09,I10,99310,314.48,45,Extended home health visit of 45 minutes. Skilled nursing assessment and wound care documented.,0,Professional,11
+C-00097,M-1007,P-219,2025-04-05,E11.9,99213,198.93,27,Patient seen for 27 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00098,M-1007,P-228,2025-02-07,K21.0,99214,188.19,31,Patient evaluated for 31 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00099,M-1008,P-202,2025-02-13,M54.5,99213,336.26,29,Patient seen for 29 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00100,M-1008,P-218,2025-04-26,G43.909,99215,240.95,49,Comprehensive evaluation lasting 49 minutes. High complexity management of multiple conditions.,0,Professional,12
+C-00101,M-1008,P-215,2025-08-08,F41.1,99310,312.24,39,Extended home health visit of 39 minutes. Skilled nursing assessment and wound care documented.,0,Professional,13
+C-00102,M-1008,P-220,2025-04-17,M54.5,99213,335.85,21,Patient seen for 21 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00103,M-1008,P-222,2025-02-08,J06.9,99213,126.93,23,Patient seen for 23 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00104,M-1008,P-214,2025-01-17,M54.5,99214,206.88,39,Patient evaluated for 39 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00105,M-1008,P-223,2025-04-30,F41.1,99213,99.22,27,Patient seen for 27 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00106,M-1008,P-219,2025-10-06,M54.5,99214,194.79,33,Patient evaluated for 33 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00107,M-1008,P-205,2025-03-26,F41.1,99310,99.28,37,Extended home health visit of 37 minutes. Skilled nursing assessment and wound care documented.,0,Professional,13
+C-00108,M-1008,P-224,2025-08-28,F41.1,99309,198.57,29,"Home visit completed in 29 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,13
+C-00109,M-1008,P-213,2025-08-13,I10,99310,225.8,43,Extended home health visit of 43 minutes. Skilled nursing assessment and wound care documented.,0,Professional,13
+C-00110,M-1008,P-202,2025-01-14,I10,99309,243.0,30,"Home visit completed in 30 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,11
+C-00111,M-1008,P-222,2025-01-11,F41.1,99309,238.52,34,"Home visit completed in 34 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,13
+C-00112,M-1008,P-202,2025-08-15,F41.1,99215,207.04,42,Comprehensive evaluation lasting 42 minutes. High complexity management of multiple conditions.,0,Professional,11
+C-00113,M-1008,P-219,2025-08-29,N18.3,99214,341.64,37,Patient evaluated for 37 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00114,M-1008,P-211,2025-06-18,J44.1,99213,311.59,21,Patient seen for 21 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00115,M-1008,P-216,2025-10-09,E11.9,99213,299.66,26,Patient seen for 26 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00116,M-1008,P-203,2025-07-26,G43.909,99213,111.3,25,Patient seen for 25 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00117,M-1009,P-228,2025-09-23,N18.3,99214,94.64,36,Patient evaluated for 36 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00118,M-1009,P-225,2025-04-15,F41.1,99214,285.2,37,Patient evaluated for 37 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00119,M-1009,P-205,2025-09-06,I10,99310,317.83,42,Extended home health visit of 42 minutes. Skilled nursing assessment and wound care documented.,0,Professional,11
+C-00120,M-1009,P-221,2025-06-09,G43.909,99214,271.64,33,Patient evaluated for 33 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00121,M-1009,P-218,2025-02-28,I25.10,99214,347.91,33,Patient evaluated for 33 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00122,M-1009,P-221,2025-05-30,G43.909,99309,331.82,32,"Home visit completed in 32 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,13
+C-00123,M-1009,P-209,2025-05-05,I25.10,99214,344.67,37,Patient evaluated for 37 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00124,M-1009,P-205,2025-03-11,I10,99213,217.23,29,Patient seen for 29 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00125,M-1009,P-225,2025-09-17,F41.1,99215,171.77,46,Comprehensive evaluation lasting 46 minutes. High complexity management of multiple conditions.,0,Professional,11
+C-00126,M-1009,P-210,2025-09-08,J06.9,99215,236.58,49,Comprehensive evaluation lasting 49 minutes. High complexity management of multiple conditions.,0,Professional,12
+C-00127,M-1009,P-218,2025-10-06,J44.1,99214,229.02,35,Patient evaluated for 35 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00128,M-1009,P-230,2025-05-03,K21.0,99213,344.81,23,Patient seen for 23 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00129,M-1009,P-208,2025-08-31,J44.1,99309,91.78,31,"Home visit completed in 31 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,12
+C-00130,M-1009,P-222,2025-09-11,E11.9,99215,344.82,50,Comprehensive evaluation lasting 50 minutes. High complexity management of multiple conditions.,0,Professional,11
+C-00131,M-1009,P-217,2025-08-14,I10,G0156,314.82,35,Home health aide services provided for 35 minutes. Personal care assistance documented.,0,Professional,13
+C-00132,M-1009,P-230,2025-03-21,I10,99214,190.69,32,Patient evaluated for 32 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00133,M-1009,P-226,2025-07-23,I10,G0156,248.28,35,Home health aide services provided for 35 minutes. Personal care assistance documented.,0,Professional,12
+C-00134,M-1009,P-228,2025-06-12,I25.10,99214,182.6,38,Patient evaluated for 38 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00135,M-1010,P-220,2025-05-28,M54.5,99213,264.79,30,Patient seen for 30 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00136,M-1010,P-203,2025-02-21,I25.10,99214,285.3,31,Patient evaluated for 31 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00137,M-1010,P-223,2025-01-29,F41.1,99213,92.42,20,Patient seen for 20 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00138,M-1010,P-212,2025-10-17,J06.9,99214,223.41,33,Patient evaluated for 33 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00139,M-1010,P-206,2025-05-04,I25.10,99213,247.32,26,Patient seen for 26 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00140,M-1010,P-205,2025-05-11,E11.9,99213,148.57,30,Patient seen for 30 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00141,M-1010,P-229,2025-08-15,N18.3,99213,122.65,28,Patient seen for 28 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00142,M-1010,P-210,2025-08-22,F41.1,99214,266.38,36,Patient evaluated for 36 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00143,M-1011,P-228,2025-07-03,K21.0,99214,182.97,33,Patient evaluated for 33 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00144,M-1011,P-223,2025-01-05,K21.0,99213,186.87,30,Patient seen for 30 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00145,M-1011,P-225,2025-09-12,F41.1,99215,325.87,40,Comprehensive evaluation lasting 40 minutes. High complexity management of multiple conditions.,0,Professional,11
+C-00146,M-1011,P-220,2025-05-09,J06.9,99309,251.89,28,"Home visit completed in 28 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,13
+C-00147,M-1011,P-204,2025-08-14,E11.9,99310,90.64,45,Extended home health visit of 45 minutes. Skilled nursing assessment and wound care documented.,0,Professional,13
+C-00148,M-1011,P-212,2025-06-17,J44.1,99215,325.6,41,Comprehensive evaluation lasting 41 minutes. High complexity management of multiple conditions.,0,Professional,11
+C-00149,M-1011,P-207,2025-07-07,G43.909,99213,316.64,28,Patient seen for 28 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00150,M-1011,P-230,2025-09-04,F41.1,99213,149.38,22,Patient seen for 22 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00151,M-1011,P-228,2025-02-08,J06.9,99213,206.45,21,Patient seen for 21 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00152,M-1011,P-228,2025-10-13,N18.3,99214,344.58,40,Patient evaluated for 40 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00153,M-1011,P-226,2025-08-21,N18.3,99213,224.87,24,Patient seen for 24 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00154,M-1011,P-224,2025-07-10,I10,99214,182.88,39,Patient evaluated for 39 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00155,M-1011,P-208,2025-10-15,N18.3,99214,318.74,39,Patient evaluated for 39 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00156,M-1011,P-208,2025-06-04,J44.1,99214,302.44,40,Patient evaluated for 40 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00157,M-1012,P-202,2025-03-01,I10,99310,348.9,39,Extended home health visit of 39 minutes. Skilled nursing assessment and wound care documented.,0,Professional,11
+C-00158,M-1012,P-229,2025-10-04,J44.1,99214,202.48,36,Patient evaluated for 36 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00159,M-1012,P-224,2025-09-08,K21.0,99215,256.83,46,Comprehensive evaluation lasting 46 minutes. High complexity management of multiple conditions.,0,Professional,12
+C-00160,M-1012,P-209,2025-08-16,M54.5,99213,138.66,25,Patient seen for 25 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00161,M-1012,P-204,2025-07-03,E11.9,G0156,227.01,35,Home health aide services provided for 35 minutes. Personal care assistance documented.,0,Professional,12
+C-00162,M-1012,P-209,2025-08-21,I10,99213,336.23,21,Patient seen for 21 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00163,M-1012,P-207,2025-01-26,N18.3,99214,342.2,39,Patient evaluated for 39 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00164,M-1012,P-205,2025-10-11,M54.5,99215,98.52,43,Comprehensive evaluation lasting 43 minutes. High complexity management of multiple conditions.,0,Professional,13
+C-00165,M-1012,P-207,2025-03-17,K21.0,99309,168.71,28,"Home visit completed in 28 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,11
+C-00166,M-1012,P-209,2025-10-04,F41.1,99309,346.63,27,"Home visit completed in 27 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,11
+C-00167,M-1013,P-222,2025-05-02,K21.0,99309,84.01,27,"Home visit completed in 27 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,12
+C-00168,M-1013,P-201,2025-08-04,G43.909,99213,114.22,20,Patient seen for 20 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00169,M-1013,P-224,2025-09-20,K21.0,99213,290.06,27,Patient seen for 27 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00170,M-1013,P-215,2025-09-24,F41.1,99214,91.71,39,Patient evaluated for 39 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00171,M-1013,P-221,2025-07-25,J44.1,G0156,349.62,30,Home health aide services provided for 30 minutes. Personal care assistance documented.,0,Professional,13
+C-00172,M-1013,P-204,2025-02-11,N18.3,99214,99.84,37,Patient evaluated for 37 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00173,M-1013,P-205,2025-10-27,G43.909,99213,248.57,24,Patient seen for 24 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00174,M-1013,P-211,2025-08-21,G43.909,99213,223.25,29,Patient seen for 29 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00175,M-1013,P-214,2025-10-10,M54.5,99213,310.25,21,Patient seen for 21 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00176,M-1014,P-229,2025-07-24,J44.1,99213,303.4,25,Patient seen for 25 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00177,M-1014,P-204,2025-07-11,J06.9,99213,259.58,25,Patient seen for 25 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00178,M-1014,P-230,2025-02-17,J44.1,99214,304.58,31,Patient evaluated for 31 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00179,M-1014,P-224,2025-10-28,G43.909,99215,230.22,42,Comprehensive evaluation lasting 42 minutes. High complexity management of multiple conditions.,0,Professional,13
+C-00180,M-1014,P-211,2025-08-05,E11.9,99214,175.47,36,Patient evaluated for 36 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00181,M-1014,P-220,2025-04-19,J06.9,99213,236.04,21,Patient seen for 21 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00182,M-1014,P-216,2025-10-12,N18.3,99213,174.53,21,Patient seen for 21 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00183,M-1014,P-225,2025-10-15,K21.0,99213,297.95,23,Patient seen for 23 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00184,M-1014,P-222,2025-05-17,E11.9,99214,244.43,30,Patient evaluated for 30 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00185,M-1014,P-209,2025-06-29,E11.9,99215,328.82,44,Comprehensive evaluation lasting 44 minutes. High complexity management of multiple conditions.,0,Professional,11
+C-00186,M-1014,P-228,2025-03-14,E11.9,99213,188.21,30,Patient seen for 30 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00187,M-1014,P-224,2025-06-24,J06.9,99214,193.35,36,Patient evaluated for 36 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00188,M-1014,P-210,2025-01-27,J06.9,99215,240.98,49,Comprehensive evaluation lasting 49 minutes. High complexity management of multiple conditions.,0,Professional,11
+C-00189,M-1014,P-225,2025-08-15,J44.1,99214,102.03,40,Patient evaluated for 40 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00190,M-1014,P-220,2025-09-20,I10,99214,138.2,34,Patient evaluated for 34 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00191,M-1015,P-204,2025-09-27,F41.1,99213,240.15,30,Patient seen for 30 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00192,M-1015,P-208,2025-04-15,F41.1,99213,94.79,29,Patient seen for 29 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00193,M-1015,P-225,2025-03-03,E11.9,99213,158.15,24,Patient seen for 24 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00194,M-1015,P-224,2025-04-28,G43.909,99214,182.66,32,Patient evaluated for 32 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00195,M-1015,P-227,2025-01-22,J44.1,99214,99.46,35,Patient evaluated for 35 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00196,M-1015,P-215,2025-10-21,J44.1,99310,235.45,40,Extended home health visit of 40 minutes. Skilled nursing assessment and wound care documented.,0,Professional,13
+C-00197,M-1015,P-221,2025-06-16,J06.9,99214,189.36,31,Patient evaluated for 31 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00198,M-1015,P-215,2025-02-24,M54.5,99309,103.8,30,"Home visit completed in 30 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,12
+C-00199,M-1015,P-219,2025-06-08,N18.3,99214,186.86,31,Patient evaluated for 31 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00200,M-1015,P-211,2025-02-28,G43.909,99215,217.83,41,Comprehensive evaluation lasting 41 minutes. High complexity management of multiple conditions.,0,Professional,13
+C-00201,M-1015,P-207,2025-03-17,M54.5,99310,174.8,40,Extended home health visit of 40 minutes. Skilled nursing assessment and wound care documented.,0,Professional,11
+C-00202,M-1015,P-205,2025-02-08,J06.9,99213,242.65,22,Patient seen for 22 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00203,M-1015,P-216,2025-08-18,K21.0,99214,285.17,39,Patient evaluated for 39 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00204,M-1015,P-221,2025-06-11,J06.9,G0156,313.35,35,Home health aide services provided for 35 minutes. Personal care assistance documented.,0,Professional,12
+C-00205,M-1016,P-216,2025-01-29,N18.3,99214,295.01,34,Patient evaluated for 34 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00206,M-1016,P-203,2025-07-08,F41.1,99213,90.15,27,Patient seen for 27 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00207,M-1016,P-221,2025-09-17,J44.1,99309,246.05,26,"Home visit completed in 26 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,12
+C-00208,M-1016,P-219,2025-10-20,M54.5,99214,201.43,30,Patient evaluated for 30 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00209,M-1016,P-220,2025-08-19,I10,99214,338.59,32,Patient evaluated for 32 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00210,M-1016,P-223,2025-05-07,I25.10,99213,126.59,30,Patient seen for 30 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00211,M-1016,P-217,2025-05-25,J44.1,99214,178.25,32,Patient evaluated for 32 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00212,M-1016,P-225,2025-06-21,I10,99213,94.14,29,Patient seen for 29 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00213,M-1016,P-204,2025-03-18,N18.3,99214,156.72,36,Patient evaluated for 36 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00214,M-1017,P-222,2025-07-20,J06.9,99213,163.76,25,Patient seen for 25 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00215,M-1017,P-223,2025-06-18,J06.9,99310,230.91,39,Extended home health visit of 39 minutes. Skilled nursing assessment and wound care documented.,0,Professional,13
+C-00216,M-1017,P-223,2025-02-17,J44.1,99309,326.36,35,"Home visit completed in 35 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,13
+C-00217,M-1017,P-212,2025-04-20,N18.3,99213,128.67,24,Patient seen for 24 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00218,M-1017,P-207,2025-06-01,I10,99213,121.84,22,Patient seen for 22 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00219,M-1017,P-225,2025-06-22,K21.0,99214,90.19,38,Patient evaluated for 38 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00220,M-1017,P-220,2025-03-26,I25.10,99213,128.83,22,Patient seen for 22 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00221,M-1017,P-214,2025-05-26,I25.10,99213,341.79,23,Patient seen for 23 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00222,M-1017,P-218,2025-04-10,N18.3,99213,324.07,27,Patient seen for 27 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00223,M-1017,P-219,2025-07-15,G43.909,G0156,287.75,37,Home health aide services provided for 37 minutes. Personal care assistance documented.,0,Professional,13
+C-00224,M-1017,P-214,2025-03-12,F41.1,G0156,296.34,33,Home health aide services provided for 33 minutes. Personal care assistance documented.,0,Professional,11
+C-00225,M-1017,P-221,2025-02-22,G43.909,99214,229.73,35,Patient evaluated for 35 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00226,M-1017,P-210,2025-09-20,J06.9,99213,153.65,22,Patient seen for 22 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00227,M-1017,P-203,2025-06-28,E11.9,99310,300.51,38,Extended home health visit of 38 minutes. Skilled nursing assessment and wound care documented.,0,Professional,12
+C-00228,M-1017,P-202,2025-02-11,N18.3,99213,143.66,25,Patient seen for 25 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00229,M-1017,P-201,2025-06-21,J06.9,99213,306.58,21,Patient seen for 21 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00230,M-1017,P-202,2025-03-13,I25.10,99213,267.94,27,Patient seen for 27 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00231,M-1018,P-201,2025-03-18,G43.909,99310,149.1,35,Extended home health visit of 35 minutes. Skilled nursing assessment and wound care documented.,0,Professional,13
+C-00232,M-1018,P-220,2025-05-02,F41.1,99214,289.57,31,Patient evaluated for 31 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00233,M-1018,P-202,2025-08-23,I10,99213,294.35,30,Patient seen for 30 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00234,M-1018,P-227,2025-09-21,K21.0,99310,224.73,44,Extended home health visit of 44 minutes. Skilled nursing assessment and wound care documented.,0,Professional,11
+C-00235,M-1018,P-223,2025-06-30,M54.5,99213,80.42,26,Patient seen for 26 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00236,M-1018,P-214,2025-07-04,I10,99213,103.12,30,Patient seen for 30 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00237,M-1018,P-218,2025-07-19,I25.10,99214,229.62,38,Patient evaluated for 38 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00238,M-1018,P-221,2025-01-09,N18.3,99213,148.49,25,Patient seen for 25 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00239,M-1018,P-212,2025-10-25,N18.3,99213,249.63,30,Patient seen for 30 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00240,M-1018,P-202,2025-03-31,I25.10,99213,299.65,25,Patient seen for 25 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00241,M-1018,P-216,2025-08-23,E11.9,99214,97.04,32,Patient evaluated for 32 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00242,M-1018,P-207,2025-06-11,F41.1,99213,319.16,23,Patient seen for 23 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00243,M-1018,P-213,2025-01-19,M54.5,G0156,207.82,38,Home health aide services provided for 38 minutes. Personal care assistance documented.,0,Professional,12
+C-00244,M-1018,P-212,2025-06-19,F41.1,99309,313.77,25,"Home visit completed in 25 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,11
+C-00245,M-1018,P-226,2025-07-17,N18.3,99213,280.69,26,Patient seen for 26 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00246,M-1018,P-216,2025-09-23,F41.1,99214,329.56,35,Patient evaluated for 35 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00247,M-1018,P-224,2025-04-03,G43.909,99214,242.66,36,Patient evaluated for 36 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00248,M-1019,P-204,2025-08-17,K21.0,99213,159.82,30,Patient seen for 30 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00249,M-1019,P-214,2025-01-22,N18.3,99213,174.92,27,Patient seen for 27 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00250,M-1019,P-214,2025-07-27,N18.3,99213,100.26,20,Patient seen for 20 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00251,M-1019,P-226,2025-03-15,K21.0,99215,337.25,42,Comprehensive evaluation lasting 42 minutes. High complexity management of multiple conditions.,0,Professional,13
+C-00252,M-1019,P-226,2025-07-07,N18.3,99214,98.15,32,Patient evaluated for 32 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00253,M-1019,P-219,2025-07-09,N18.3,99213,263.35,22,Patient seen for 22 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00254,M-1019,P-225,2025-07-23,N18.3,99213,222.95,22,Patient seen for 22 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00255,M-1019,P-209,2025-04-06,I25.10,99213,87.0,21,Patient seen for 21 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00256,M-1019,P-213,2025-05-14,I25.10,99310,150.68,36,Extended home health visit of 36 minutes. Skilled nursing assessment and wound care documented.,0,Professional,11
+C-00257,M-1019,P-220,2025-03-11,I10,99213,134.05,27,Patient seen for 27 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00258,M-1019,P-206,2025-06-13,N18.3,99309,349.26,32,"Home visit completed in 32 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,13
+C-00259,M-1019,P-203,2025-03-22,J06.9,99214,320.66,34,Patient evaluated for 34 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00260,M-1019,P-217,2025-05-02,I25.10,99213,293.86,23,Patient seen for 23 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00261,M-1020,P-218,2025-10-10,J06.9,99214,296.99,37,Patient evaluated for 37 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00262,M-1020,P-229,2025-09-03,G43.909,99213,187.5,24,Patient seen for 24 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00263,M-1020,P-225,2025-06-12,I10,99214,99.91,39,Patient evaluated for 39 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00264,M-1020,P-215,2025-10-10,K21.0,99214,114.65,35,Patient evaluated for 35 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00265,M-1020,P-225,2025-01-29,I10,G0156,215.77,36,Home health aide services provided for 36 minutes. Personal care assistance documented.,0,Professional,13
+C-00266,M-1020,P-205,2025-04-26,N18.3,99213,167.12,22,Patient seen for 22 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00267,M-1020,P-229,2025-10-10,F41.1,99213,147.66,21,Patient seen for 21 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00268,M-1020,P-221,2025-03-28,K21.0,99213,105.23,28,Patient seen for 28 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00269,M-1020,P-205,2025-06-22,K21.0,99213,274.57,29,Patient seen for 29 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00270,M-1020,P-227,2025-10-23,F41.1,99309,92.27,26,"Home visit completed in 26 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,13
+C-00271,M-1020,P-207,2025-01-16,I25.10,99215,246.89,46,Comprehensive evaluation lasting 46 minutes. High complexity management of multiple conditions.,0,Professional,13
+C-00272,M-1020,P-218,2025-07-27,F41.1,99213,210.4,24,Patient seen for 24 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00273,M-1020,P-203,2025-09-05,I25.10,99214,198.69,32,Patient evaluated for 32 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00274,M-1021,P-220,2025-06-26,J44.1,99213,278.23,25,Patient seen for 25 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00275,M-1021,P-225,2025-05-04,I25.10,99213,108.67,28,Patient seen for 28 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00276,M-1021,P-209,2025-05-29,J44.1,99214,106.14,32,Patient evaluated for 32 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00277,M-1021,P-214,2025-10-23,N18.3,99213,299.64,22,Patient seen for 22 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00278,M-1021,P-225,2025-06-07,I25.10,99213,206.04,28,Patient seen for 28 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00279,M-1021,P-203,2025-05-04,M54.5,99310,203.45,43,Extended home health visit of 43 minutes. Skilled nursing assessment and wound care documented.,0,Professional,13
+C-00280,M-1021,P-212,2025-08-29,F41.1,99213,213.62,24,Patient seen for 24 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00281,M-1021,P-201,2025-05-16,N18.3,99309,116.16,31,"Home visit completed in 31 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,12
+C-00282,M-1021,P-212,2025-04-10,N18.3,99213,233.98,20,Patient seen for 20 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00283,M-1021,P-210,2025-10-09,F41.1,99213,201.6,28,Patient seen for 28 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00284,M-1021,P-222,2025-07-21,N18.3,99214,343.27,32,Patient evaluated for 32 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00285,M-1021,P-218,2025-09-18,J44.1,99310,133.75,37,Extended home health visit of 37 minutes. Skilled nursing assessment and wound care documented.,0,Professional,13
+C-00286,M-1021,P-202,2025-08-31,G43.909,99213,272.67,22,Patient seen for 22 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00287,M-1022,P-220,2025-06-13,J06.9,99309,168.55,27,"Home visit completed in 27 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,12
+C-00288,M-1022,P-220,2025-09-17,G43.909,99215,240.31,44,Comprehensive evaluation lasting 44 minutes. High complexity management of multiple conditions.,0,Professional,13
+C-00289,M-1022,P-216,2025-01-09,N18.3,99215,208.22,44,Comprehensive evaluation lasting 44 minutes. High complexity management of multiple conditions.,0,Professional,12
+C-00290,M-1022,P-222,2025-01-14,K21.0,99213,237.6,26,Patient seen for 26 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00291,M-1022,P-209,2025-01-27,K21.0,G0156,235.96,39,Home health aide services provided for 39 minutes. Personal care assistance documented.,0,Professional,12
+C-00292,M-1022,P-206,2025-07-14,J06.9,99214,289.14,39,Patient evaluated for 39 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00293,M-1022,P-208,2025-08-14,N18.3,99213,131.51,21,Patient seen for 21 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00294,M-1022,P-205,2025-08-30,E11.9,99214,190.8,33,Patient evaluated for 33 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00295,M-1022,P-205,2025-09-02,G43.909,99214,167.76,38,Patient evaluated for 38 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00296,M-1022,P-211,2025-06-25,G43.909,G0156,326.27,37,Home health aide services provided for 37 minutes. Personal care assistance documented.,0,Professional,12
+C-00297,M-1023,P-225,2025-05-16,K21.0,99309,253.69,35,"Home visit completed in 35 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,12
+C-00298,M-1023,P-207,2025-04-26,F41.1,G0156,230.68,34,Home health aide services provided for 34 minutes. Personal care assistance documented.,0,Professional,12
+C-00299,M-1023,P-223,2025-06-28,G43.909,99213,165.6,27,Patient seen for 27 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00300,M-1023,P-209,2025-07-14,J44.1,99213,262.69,29,Patient seen for 29 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00301,M-1023,P-225,2025-02-10,N18.3,99309,91.36,29,"Home visit completed in 29 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,12
+C-00302,M-1023,P-221,2025-10-03,F41.1,99213,137.78,27,Patient seen for 27 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00303,M-1023,P-223,2025-10-28,M54.5,99213,246.23,21,Patient seen for 21 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00304,M-1023,P-202,2025-04-30,E11.9,99214,140.93,38,Patient evaluated for 38 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00305,M-1023,P-214,2025-03-12,E11.9,99213,107.15,27,Patient seen for 27 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00306,M-1023,P-230,2025-09-01,I25.10,99213,332.46,30,Patient seen for 30 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00307,M-1023,P-207,2025-01-31,I10,99215,166.72,44,Comprehensive evaluation lasting 44 minutes. High complexity management of multiple conditions.,0,Professional,13
+C-00308,M-1023,P-219,2025-03-31,J44.1,99213,326.57,20,Patient seen for 20 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00309,M-1023,P-230,2025-04-06,F41.1,99310,292.75,41,Extended home health visit of 41 minutes. Skilled nursing assessment and wound care documented.,0,Professional,11
+C-00310,M-1023,P-201,2025-06-21,F41.1,99213,108.97,29,Patient seen for 29 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00311,M-1023,P-221,2025-03-10,G43.909,99214,320.1,37,Patient evaluated for 37 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00312,M-1023,P-209,2025-08-23,F41.1,99213,169.28,21,Patient seen for 21 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00313,M-1023,P-206,2025-10-18,M54.5,99213,293.51,25,Patient seen for 25 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00314,M-1023,P-220,2025-09-21,N18.3,99309,303.29,31,"Home visit completed in 31 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,11
+C-00315,M-1024,P-222,2025-05-08,E11.9,99213,208.91,22,Patient seen for 22 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00316,M-1024,P-213,2025-06-04,K21.0,99213,337.59,24,Patient seen for 24 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00317,M-1024,P-219,2025-05-01,E11.9,99213,177.08,30,Patient seen for 30 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00318,M-1024,P-204,2025-09-15,F41.1,99214,189.46,32,Patient evaluated for 32 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00319,M-1024,P-204,2025-04-24,M54.5,99214,179.24,34,Patient evaluated for 34 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00320,M-1024,P-216,2025-10-09,I25.10,99213,180.88,29,Patient seen for 29 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00321,M-1024,P-226,2025-02-11,G43.909,99214,285.7,33,Patient evaluated for 33 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00322,M-1024,P-217,2025-02-27,E11.9,99215,327.66,41,Comprehensive evaluation lasting 41 minutes. High complexity management of multiple conditions.,0,Professional,13
+C-00323,M-1024,P-229,2025-03-26,N18.3,99214,224.9,39,Patient evaluated for 39 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00324,M-1024,P-215,2025-09-08,I10,99213,273.57,23,Patient seen for 23 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00325,M-1024,P-215,2025-08-01,I25.10,99309,115.62,32,"Home visit completed in 32 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,13
+C-00326,M-1024,P-202,2025-01-12,J44.1,99214,297.87,40,Patient evaluated for 40 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00327,M-1024,P-227,2025-01-24,J44.1,99213,236.14,23,Patient seen for 23 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00328,M-1024,P-223,2025-02-05,I25.10,99213,332.34,20,Patient seen for 20 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00329,M-1025,P-214,2025-08-04,N18.3,99213,286.77,22,Patient seen for 22 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00330,M-1025,P-215,2025-10-04,J06.9,99309,181.42,31,"Home visit completed in 31 minutes. Patient assessed, vitals stable, care plan reviewed.",0,Professional,13
+C-00331,M-1025,P-228,2025-07-21,G43.909,99213,348.07,22,Patient seen for 22 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00332,M-1025,P-224,2025-06-02,I25.10,G0156,284.17,30,Home health aide services provided for 30 minutes. Personal care assistance documented.,0,Professional,13
+C-00333,M-1025,P-224,2025-04-28,M54.5,99214,182.4,38,Patient evaluated for 38 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00334,M-1025,P-212,2025-02-27,E11.9,99213,333.1,23,Patient seen for 23 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00335,M-1025,P-214,2025-02-04,I10,99214,144.98,30,Patient evaluated for 30 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00336,M-1025,P-202,2025-01-25,M54.5,99214,269.89,40,Patient evaluated for 40 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00337,M-1025,P-202,2025-01-29,J06.9,99214,225.74,33,Patient evaluated for 33 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00338,M-1025,P-210,2025-06-14,M54.5,99213,166.1,29,Patient seen for 29 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00339,M-1025,P-229,2025-07-31,F41.1,99213,220.74,30,Patient seen for 30 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00340,M-1025,P-202,2025-03-31,J44.1,99214,317.52,39,Patient evaluated for 39 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00341,M-1001,P-231,2025-01-31,I10,99215,285.0,15,Comprehensive evaluation lasting 15 minutes. High complexity management of multiple conditions.,1,Professional,12
+C-00342,M-1001,P-231,2025-02-07,I10,99215,285.0,15,Comprehensive evaluation lasting 15 minutes. High complexity management of multiple conditions.,1,Professional,11
+C-00343,M-1001,P-231,2025-02-14,I10,99215,285.0,15,Comprehensive evaluation lasting 15 minutes. High complexity management of multiple conditions.,1,Professional,12
+C-00344,M-1001,P-231,2025-02-21,I10,99215,285.0,15,Comprehensive evaluation lasting 15 minutes. High complexity management of multiple conditions.,1,Professional,13
+C-00345,M-1001,P-231,2025-02-28,I10,99215,285.0,15,Comprehensive evaluation lasting 15 minutes. High complexity management of multiple conditions.,1,Professional,13
+C-00346,M-1001,P-231,2025-03-07,I10,99215,285.0,15,Comprehensive evaluation lasting 15 minutes. High complexity management of multiple conditions.,1,Professional,12
+C-00347,M-1001,P-231,2025-03-14,I10,99215,285.0,15,Comprehensive evaluation lasting 15 minutes. High complexity management of multiple conditions.,1,Professional,13
+C-00348,M-1001,P-231,2025-03-21,I10,99215,285.0,15,Comprehensive evaluation lasting 15 minutes. High complexity management of multiple conditions.,1,Professional,12
+C-00349,M-1002,P-232,2025-09-01,E11.9,G0156,161.63,20,Home health aide services provided for 20 minutes. Personal care assistance documented.,1,Professional,11
+C-00350,M-1002,P-232,2025-09-02,E11.9,99310,157.65,20,Extended home health visit of 20 minutes. Skilled nursing assessment and wound care documented.,1,Professional,13
+C-00351,M-1002,P-232,2025-09-03,E11.9,99310,144.1,20,Extended home health visit of 20 minutes. Skilled nursing assessment and wound care documented.,1,Professional,11
+C-00352,M-1002,P-232,2025-09-04,E11.9,99310,205.75,20,Extended home health visit of 20 minutes. Skilled nursing assessment and wound care documented.,1,Professional,11
+C-00353,M-1002,P-232,2025-09-05,E11.9,99310,211.47,20,Extended home health visit of 20 minutes. Skilled nursing assessment and wound care documented.,1,Professional,13
+C-00354,M-1002,P-232,2025-09-06,E11.9,99310,216.78,20,Extended home health visit of 20 minutes. Skilled nursing assessment and wound care documented.,1,Professional,13
+C-00355,M-1002,P-232,2025-09-07,E11.9,G0156,133.41,20,Home health aide services provided for 20 minutes. Personal care assistance documented.,1,Professional,11
+C-00356,M-1002,P-232,2025-09-08,E11.9,99310,140.33,20,Extended home health visit of 20 minutes. Skilled nursing assessment and wound care documented.,1,Professional,13
+C-00357,M-1002,P-232,2025-09-09,E11.9,99309,212.22,20,"Home visit completed in 20 minutes. Patient assessed, vitals stable, care plan reviewed.",1,Professional,12
+C-00358,M-1002,P-232,2025-09-10,E11.9,99309,173.56,20,"Home visit completed in 20 minutes. Patient assessed, vitals stable, care plan reviewed.",1,Professional,11
+C-00359,M-1002,P-232,2025-09-11,E11.9,99309,146.85,20,"Home visit completed in 20 minutes. Patient assessed, vitals stable, care plan reviewed.",1,Professional,13
+C-00360,M-1002,P-232,2025-09-12,E11.9,G0156,180.29,20,Home health aide services provided for 20 minutes. Personal care assistance documented.,1,Professional,11
+C-00361,M-1003,P-233,2025-10-15,M54.5,99214,195.0,18,Patient evaluated for 18 minutes. Moderate complexity decision-making. Medication adjustments discussed.,1,Professional,11
+C-00362,M-1003,P-233,2025-10-15,M54.5,99310,175.0,15,Extended home health visit of 15 minutes. Skilled nursing assessment and wound care documented.,1,Professional,13
+C-00363,M-1001,P-231,2025-05-03,M54.5,99213,150.86,25,Patient seen for 25 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00364,M-1001,P-231,2025-01-04,M54.5,99214,155.6,25,Patient evaluated for 25 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00365,M-1001,P-231,2025-07-11,I25.10,99213,154.01,25,Patient seen for 25 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00366,M-1001,P-231,2025-04-12,M54.5,99213,128.65,25,Patient seen for 25 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00367,M-1001,P-231,2025-04-30,G43.909,99214,135.41,25,Patient evaluated for 25 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00368,M-1001,P-231,2025-04-03,G43.909,99214,151.8,25,Patient evaluated for 25 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00369,M-1002,P-232,2025-07-04,I25.10,99213,143.31,25,Patient seen for 25 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,12
+C-00370,M-1002,P-232,2025-04-05,N18.3,99213,118.98,25,Patient seen for 25 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00371,M-1002,P-232,2025-07-09,J06.9,99213,91.14,25,Patient seen for 25 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00372,M-1002,P-232,2025-03-17,J06.9,99214,103.73,25,Patient evaluated for 25 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,11
+C-00373,M-1002,P-232,2025-05-26,M54.5,99214,124.95,25,Patient evaluated for 25 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00374,M-1002,P-232,2025-03-07,I25.10,99214,157.66,25,Patient evaluated for 25 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13
+C-00375,M-1003,P-233,2025-04-28,J06.9,99214,141.29,25,Patient evaluated for 25 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,12
+C-00376,M-1003,P-233,2025-02-05,G43.909,99213,124.18,25,Patient seen for 25 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00377,M-1003,P-233,2025-05-15,E11.9,99213,148.73,25,Patient seen for 25 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,11
+C-00378,M-1003,P-233,2025-07-15,E11.9,99213,118.87,25,Patient seen for 25 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00379,M-1003,P-233,2025-01-18,J06.9,99213,90.64,25,Patient seen for 25 minutes. Brief history and exam performed. Stable chronic conditions reviewed.,0,Professional,13
+C-00380,M-1003,P-233,2025-04-06,E11.9,99214,133.25,25,Patient evaluated for 25 minutes. Moderate complexity decision-making. Medication adjustments discussed.,0,Professional,13

@@ -1,0 +1,58 @@
+[
+  {
+    "case_id": "CASE-001",
+    "title": "E/M Level Inflation",
+    "description": "Provider bills CPT 99215 (high complexity) but clinical note documents only 15 minutes.",
+    "member_id": "M-1001",
+    "provider_id": "P-231",
+    "target_claim_id": "C-00348",
+    "pattern_type": "em_upcoding",
+    "clinical_note_override": "Patient seen for 15 minutes. Brief follow-up on hypertension. Vitals reviewed, no medication changes. Stable.",
+    "cpt": "99215",
+    "icd10": "I10",
+    "allowed_amount": 285.0,
+    "expected_route": "human_escalation"
+  },
+  {
+    "case_id": "CASE-002",
+    "title": "Home Health Billing Burst",
+    "description": "Member shows sudden spike in home health claims \u2014 operational anomaly plus payment risk.",
+    "member_id": "M-1002",
+    "provider_id": "P-232",
+    "target_claim_id": "C-00360",
+    "pattern_type": "home_health_burst",
+    "clinical_note_override": "Home health visit completed in 20 minutes. Skilled nursing assessment. Patient stable, glucose monitored.",
+    "cpt": "99310",
+    "icd10": "E11.9",
+    "allowed_amount": 185.0,
+    "expected_route": "human_escalation"
+  },
+  {
+    "case_id": "CASE-003",
+    "title": "Unusual Code Pairing",
+    "description": "High-complexity E/M and home visit billed same day with insufficient documentation.",
+    "member_id": "M-1003",
+    "provider_id": "P-233",
+    "target_claim_id": "C-00362",
+    "pattern_type": "code_pairing",
+    "clinical_note_override": "Patient evaluated for 18 minutes in office setting. Moderate complexity. Also home visit same day documented for 15 minutes.",
+    "cpt": "99214",
+    "icd10": "M54.5",
+    "allowed_amount": 195.0,
+    "expected_route": "human_escalation"
+  },
+  {
+    "case_id": "CASE-004",
+    "title": "Clean Claim \u2014 Auto Resolve",
+    "description": "Properly documented visit with appropriate CPT level \u2014 auto-resolves despite provider cluster flag.",
+    "member_id": "M-1010",
+    "provider_id": "P-210",
+    "target_claim_id": null,
+    "pattern_type": "clean",
+    "clinical_note_override": "Patient evaluated for 35 minutes. Moderate complexity decision-making. Diabetes and hypertension managed. Medication reconciliation completed.",
+    "cpt": "99214",
+    "icd10": "E11.9",
+    "allowed_amount": 165.0,
+    "expected_route": "auto_resolve"
+  }
+]
